@@ -1,27 +1,32 @@
-/*global Ember*/
-KonapunGithubIo.Project = DS.Model.extend({});
-
-// probably should be mixed-in...
-KonapunGithubIo.Project.reopen({
-  attributes: function(){
-    var model = this;
-    return Ember.keys(this.get('data')).map(function(key){
-      return Em.Object.create({ model: model, key: key, valueBinding: 'model.' + key });
-    });
-  }.property()
+KonapunGithubIo.Project = DS.Model.extend({
+  // TODO: keywords
+  name: DS.attr('string'),
+  language: DS.attr('string'),
+  description: DS.attr('string'),
+  isCompleted: DS.attr('boolean'),
+  link: DS.attr('string')
 });
 
-// delete below here if you do not want fixtures
+
+// temporarily keep data as fixture until heroku REST API server is set up
 KonapunGithubIo.Project.FIXTURES = [
   
   {
     id: 0,
-    
+    name: "A Mystery at the Mansion on the Mound",
+    language: "Javascript",
+    description: "A clone of a board game with a similar name",
+    isCompleted: false,
+    link: "https://github.com/konapun/mansion-on-the-mound"
   },
   
   {
     id: 1,
-    
+    name: "konapun.github.io",
+    language: "Javascript",
+    description: "Source for this site",
+    isCompleted: false,
+    link: "https://github.com/konapun/konapun.github.io"
   }
   
 ];

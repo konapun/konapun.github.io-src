@@ -1,8 +1,19 @@
-<h1>Projects</h1>
-
-<ul>
- {{#each model}}
- <li>{{#link-to 'project' this}}{{this.id}}{{/link-to}}</li>
+<div class="jumbotron jumbotron-graphic">
+  <h1>Projects</h1>
+</div>
+<ul class="row nostyle">
+  {{#each model}}
+    <li>
+      <div class="well">
+        <span class="headline">
+          {{#link-to 'project' this}}
+            <h2>{{name}}</h2>
+          {{/link-to}}
+        </span>
+        <p>
+          {{description}}
+        </p>
+    </li>
   {{/each}}
 </ul>
 
