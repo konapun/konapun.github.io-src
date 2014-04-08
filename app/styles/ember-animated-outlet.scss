@@ -1,0 +1,27 @@
+@import "compass";
+
+.ember-animated-container {
+  position: relative;
+  height: 100%;
+  //width: inherit;
+  @include transform(translate3d(0, 0, 0));
+ 
+  & > .ember-view {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include backface-visibility(hidden);
+  }
+}
+
+.ember-animated-container-fade-new {
+  position: absolute;
+}
+
+@import "effects/fade";
+@import "effects/flip";
+@import "effects/slide";
+@import "effects/slideOver";

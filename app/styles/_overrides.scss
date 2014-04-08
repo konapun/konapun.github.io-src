@@ -1,0 +1,22 @@
+a:visited {
+  color: $black;
+}
+
+a:link {
+  color: $black;
+}
+
+ul.nostyle {
+  list-style-type: none;
+}
+a.nostyle {
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: none;
+  } 
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  background-color: $green-konapun;
+}

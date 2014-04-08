@@ -1,0 +1,1 @@
+KonapunGithubIo.ApplicationAdapter = DS.FixtureAdapter;

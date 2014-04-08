@@ -1,0 +1,11 @@
+$icon-font-path: "../styles/fonts/"; // Change the path to the fonts
+$fa-font-path: '../bower_components/font-awesome/fonts' !default;
+@import "bootstrap-sass/lib/bootstrap";
+@import "font-awesome/scss/font-awesome.scss";
+@import "Hover/scss/hover.scss";
+
+@import 'colors';
+@import 'ember-animated-outlet';
+@import 'defaults';
+@import 'konapun';
+@import 'overrides';

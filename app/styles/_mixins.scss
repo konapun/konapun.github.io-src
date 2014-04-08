@@ -1,0 +1,74 @@
+@mixin translate3d($p1, $p2, $p3) {
+  -webkit-transform: translate3d($p1, $p2, $p3);
+     -moz-transform: translate3d($p1, $p2, $p3);
+      -ms-transform: translate3d($p1, $p2, $p3);
+       -o-transform: translate3d($p1, $p2, $p3);
+          transform: translate3d($p1, $p2, $p3);
+}
+
+@mixin backface-visibility($visibility) {
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+       -o-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+@mixin transition-property($property) {
+  -webkit-transition-property: $property;
+     -moz-transition-property: $property;
+       -o-transition-property: $property;
+          transition-property: $property;
+}
+
+@mixin transition-duration($duration) {
+  -webkit-transition-duration: $duration;
+     -moz-transition-duration: $duration;
+       -o-transition-duration: $duration;
+          transition-duration: $duration;
+}
+
+@mixin perspective($px) {
+  -webkit-perspective: $px;
+     -moz-perspective: $px;
+      -ms-perspective: $px;
+       -o-perspective: $px;
+          perspective: $px;
+}
+
+@mixin transition($duration) {
+  -webkit-transition: $duration;
+     -moz-transition: $duration;
+       -o-transition: $duration;
+          transition: $duration;
+}
+
+@mixin transform-style($style) {
+  -webkit-transform-style: $style;
+     -moz-transform-style: $style;
+      -ms-transform-style: $style;
+       -o-transform-style: $style;
+          transform-style: $style;
+}
+
+@mixin transform($transformation) {
+  -webkit-transform: $transformation;
+     -moz-transform: $transformation;
+      -ms-transform: $transformation;
+       -o-transform: $transformation;
+          transform: $transformation;
+}
+
+@mixin transition-timing-function($fn) {
+  -webkit-transition-timing-function: $fn;
+     -moz-transition-timing-function: $fn;
+       -o-transition-timing-function: $fn;
+          transition-timing-function: $fn;
+}
+
+@mixin box-shadow($x, $y, $w, $h, $color) {
+  -webkit-box-shadow: $x, $y, $w, $h, $color;
+     -moz-box-shadow: $x, $y, $w, $h, $color;
+       -o-box-shadow: $x, $y, $w, $h, $color;
+          box-shadow: $x, $y, $w, $h, $color;
+}

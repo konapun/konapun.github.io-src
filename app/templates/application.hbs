@@ -1,0 +1,33 @@
+<div class="wide-stripe">
+  <div class="container">
+    {{#link-to-animated 'index' animations="main:flip" class="nostyle brand"}}
+      <span class="brand">
+        <span class="black">konapun</span>.github.io
+      </span>
+    {{/link-to-animated}}
+      
+    <ul class="nav nav-pills pull-right nav-links">
+      {{#link-to-animated 'index' animations="main:flip" tagName="li"}}<a href="#">Home</a>{{/link-to-animated}}
+      {{#link-to-animated 'posts' animations="main:fade" tagName="li"}}<a href="#">Blog</a>{{/link-to-animated}}
+      {{#link-to-animated 'projects' animations="main:fade" tagName="li"}}<a href="#">Projects</a>{{/link-to-animated}}
+    </ul>
+  </div>
+</div>
+
+<div class="container">  
+  <div class="container content">
+    {{animated-outlet name='main'}}
+  </div>
+  
+  <div class="container footer">
+    <div class="pull-right">
+      <a href="#">
+        <img src="/images/facebook.png">
+      </a>
+      <a href="#">
+        <img src="/images/twitter.png">
+      </a>
+    </div>
+    Copyright &copy; 2014
+  </div>
+</div>

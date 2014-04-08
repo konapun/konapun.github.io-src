@@ -1,0 +1,157 @@
+@import 'mixins';
+
+.ember-animated-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  @include translate3d(0, 0, 0);
+}
+
+.ember-animated-container>.ember-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include backface-visibility(hidden);
+}
+  
+.ember-animated-container-fade-old {
+  @include transition-property(opacity);
+  @include transition-duration(0.5s);
+
+  z-index: 2;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.ember-animated-container-fade-old-fading {
+  filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+.ember-animated-container-fade-new{
+  z-index: 1;
+}
+
+.ember-animated-container-flip-wrap {
+  @include perspective(1200px);
+
+  width: 100%;
+  height: 100%;
+}
+
+.ember-animated-container-flip-ct {
+  @include transition(0.6s);
+  @include transform-style(preserve-3d);
+}
+
+.ember-animated-container-flip-ct-flipping {
+  @include transform(rotateY(180deg));
+}
+
+.ember-animated-container-flip-new, .ember-animated-container-flip-old {
+  @include backface-visibility(hidden);
+}
+
+.ember-animated-container-flip-old {
+  z-index: 2;
+}
+
+.ember-animated-container-flip-new {
+  @include transform(rotateY(180deg));
+}
+
+.ember-animated-container-slide-left-ct, .ember-animated-container-slide-right-ct, .ember-animated-container-slide-up-ct, .ember-animated-container-slide-down-ct {
+  -webkit-transition-property: -webkit-transform;
+     -moz-transition-property: -moz-transform;
+       -o-transition-property: -o-transform;
+          transition-property: transform;
+  @include transition-duration(0.4s);
+  @include transition-timing-function(ease-out);
+}
+
+.ember-animated-container-slide-left-ct.ember-animated-container-slide-slow-ct, .ember-animated-container-slide-right-ct.ember-animated-container-slide-slow-ct, .ember-animated-container-slide-up-ct.ember-animated-container-slide-slow-ct, .ember-animated-container-slide-down-ct.ember-animated-container-slide-slow-ct {
+  @include transition-duration(2s);
+}
+
+.ember-animated-container-slide-left-ct-sliding {
+  @include transform(translate3d(-100%, 0, 0));
+}
+
+.ember-animated-container-slide-right-ct-sliding{
+  @include transform(translate3d(100%, 0, 0));
+}
+
+.ember-animated-container-slide-up-ct-sliding {
+  @include transform(translate3d(0, -100%, 0));
+}
+
+.ember-animated-container-slide-down-ct-sliding{
+  @include transform(translate3d(0, 100%, 0));
+}
+
+.ember-animated-container-slide-left-new {
+  left: 100% !important;
+}
+
+.ember-animated-container-slide-right-new {
+  left: -100% !important;
+}
+
+.ember-animated-container-slide-up-new {
+  top: 100% !important;
+}
+
+.ember-animated-container-slide-down-new {
+  top: -100% !important;
+}
+
+.ember-animated-container-slideOver-old{
+  z-index: 1;
+}
+
+.ember-animated-container-slideOver-left-new, .ember-animated-container-slideOver-right-new, .ember-animated-container-slideOver-up-new, .ember-animated-container-slideOver-down-new {
+  -webkit-transition-property: -webkit-transform;
+     -moz-transition-property: -moz-transform;
+       -o-transition-property: -o-transform;
+          transition-property: transform;
+  
+  @include transition-duration(0.4s);
+  @include transition-timing-function(ease-out);
+  @include transform(translateX(0%));
+  z-index: 2;
+}
+
+.ember-animated-container-slideOver-left-new.ember-animated-container-slideOver-left-new-sliding, .ember-animated-container-slideOver-right-new.ember-animated-container-slideOver-left-new-sliding, .ember-animated-container-slideOver-up-new.ember-animated-container-slideOver-left-new-sliding, .ember-animated-container-slideOver-down-new.ember-animated-container-slideOver-left-new-sliding {
+  @include transform(translateX(-100%));
+}
+
+.ember-animated-container-slideOver-left-new.ember-animated-container-slideOver-right-new-sliding, .ember-animated-container-slideOver-right-new.ember-animated-container-slideOver-right-new-sliding, .ember-animated-container-slideOver-up-new.ember-animated-container-slideOver-right-new-sliding, .ember-animated-container-slideOver-down-new.ember-animated-container-slideOver-right-new-sliding {
+  @include transform(translateX(100%));
+}
+
+.ember-animated-container-slideOver-left-new.ember-animated-container-slideOver-up-new-sliding, .ember-animated-container-slideOver-right-new.ember-animated-container-slideOver-up-new-sliding, .ember-animated-container-slideOver-up-new.ember-animated-container-slideOver-up-new-sliding, .ember-animated-container-slideOver-down-new.ember-animated-container-slideOver-up-new-sliding {
+  @include transform(translateY(-100%));
+}
+
+.ember-animated-container-slideOver-left-new.ember-animated-container-slideOver-down-new-sliding, .ember-animated-container-slideOver-right-new.ember-animated-container-slideOver-down-new-sliding, .ember-animated-container-slideOver-up-new.ember-animated-container-slideOver-down-new-sliding, .ember-animated-container-slideOver-down-new.ember-animated-container-slideOver-down-new-sliding {
+  @include transform(translateY(100%));
+}
+
+.ember-animated-container-slideOver-left-new {
+  left: 100% !important;
+}
+
+.ember-animated-container-slideOver-right-new {
+  left: -100% !important;
+}
+
+.ember-animated-container-slideOver-up-new{
+  top: 100% !important;
+}
+
+.ember-animated-container-slideOver-down-new{
+  top: -100% !important;
+}
+
