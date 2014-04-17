@@ -1,33 +1,92 @@
-<div class="wide-stripe">
-  <div class="container">
-    {{#link-to-animated 'index' animations="main:flip" class="nostyle brand"}}
+<div class="mount mount-bottom">
+  <div class="wide-bar wide-bar-header">
+    <div class="container header">
+      {{#link-to-animated 'index' animations="main:flip" class="nostyle brand"}}
       <span class="brand">
         <span class="black">konapun</span>.github.io
       </span>
-    {{/link-to-animated}}
-      
-    <ul class="nav nav-pills pull-right nav-links">
-      {{#link-to-animated 'index' animations="main:flip" tagName="li"}}<a href="#">Home</a>{{/link-to-animated}}
-      {{#link-to-animated 'posts' animations="main:fade" tagName="li"}}<a href="#">Blog</a>{{/link-to-animated}}
-      {{#link-to-animated 'projects' animations="main:fade" tagName="li"}}<a href="#">Projects</a>{{/link-to-animated}}
-    </ul>
+      {{/link-to-animated}}
+        
+      <ul class="nav nav-pills pull-right nav-links">
+        {{#link-to 'index' animations="main:fade" tagName="li"}}<a href="#">Home</a>{{/link-to}}
+        {{#link-to 'about' animations="main:fade" tagName="li"}}<a href="#">About</a>{{/link-to}}
+        {{#link-to 'contact' animations="main:fade" tagName="li"}}<a href="#">Contact</a>{{/link-to}}
+      </ul>
+    </div>
   </div>
 </div>
 
-<div class="container">  
-  <div class="container content">
-    {{animated-outlet name='main'}}
+<div class="content">
+  <div class="container">
+    {{outlet name='main'}}
   </div>
-  
-  <div class="container footer">
-    <div class="pull-right">
-      <a href="#">
-        <img src="/images/facebook.png">
-      </a>
-      <a href="#">
-        <img src="/images/twitter.png">
-      </a>
+</div>      
+            
+<div class="mount mount-top footer">
+  <div class="container">
+    <!-- Featured Elements -->
+    <div class="row">
+      <div class="col-md-2">
+        <figure class="featured bg-pattern">
+          <span class="icon glyphicon glyphicon-list-alt"></span>
+          {{#link-to "posts" class="figcaption" animations="main:fade"}}
+            <h4>Blog</h4>
+          {{/link-to}}
+        </figure>
+      </div>
+      <div class="col-md-2">
+        <figure class="featured bg-pattern">
+          <span class="icon darkgrey fa fa-flask"></span>
+          {{#link-to "posts" class="figcaption" animations="main:fade"}}
+            <h4>Projects</h4>
+          {{/link-to}}
+        </figure>
+      </div>
+      <div class="col-md-2">
+        <figure class="featured bg-pattern">
+          <span class="icon darkgrey fa fa-beer"></span>
+          {{#link-to "posts" class="figcaption" animations="main:fade"}}
+            <h4>Placeholder</h4>
+          {{/link-to}}
+        </figure>
+      </div>
+      <div class="col-md-2">
+        <figure class="featured bg-pattern">
+          <span class="icon darkgrey fa fa-beer"></span>
+          {{#link-to "posts" class="figcaption" animations="main:fade"}}
+            <h4>Placeholder</h4>
+          {{/link-to}}
+        </figure>
+      </div>
+      <div class="col-md-2">
+        <figure class="featured bg-pattern">
+          <span class="icon darkgrey fa fa-beer"></span>
+          {{#link-to "posts" class="figcaption" animations="main:fade"}}
+            <h4>Placeholder</h4>
+          {{/link-to}}
+        </figure>
+      </div>
+      <div class="col-md-2">
+        <figure class="featured bg-pattern">
+          <span class="icon darkgrey fa fa-beer"></span>
+          {{#link-to "posts" class="figcaption" animations="main:fade"}}
+            <h4>Placeholder</h4>
+          {{/link-to}}
+        </figure>
+      </div>
     </div>
-    Copyright &copy; 2014
+  </div>
+  <div class="wide-bar wide-bar-footer">
+    <div class="container footer-content">
+      <div class="pull-right">
+        <a href="#">
+          <img src="/images/facebook.png">
+        </a>
+        <a href="#">
+          <img src="/images/twitter.png">
+        </a>
+      </div>
+      Copyright &copy; 2014
+    </div>
   </div>
 </div>

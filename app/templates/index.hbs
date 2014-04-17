@@ -7,19 +7,19 @@
               
               <div class="col-md-8">
                 <div class="well">
-                  <div class="highlight">
-                    {{view}}
+                  <div class="highlight-description">
+                    {{outlet "highlight"}}
                   </div>
                   <div class="pull-right">
-                    <a href="#">Learn more &gt;</a>
+                    {{#link-to 'about'}}Read more &gt;{{/link-to}}
                   </div>
                 </div>
                 
                 <!-- highlights -->
                 <div class="row">
                   <div class="col-md-3">
-                    <figure class="featured bg-yellow-konapun">
-                      <span class="icon fa fa-question"></span>
+                    <figure class="featured bg-pattern">
+                      <span class="icon darkgrey fa fa-question"></span>
                       <a class="figcaption" href="#" {{action "showHighlight" "about"}}>
                         <h4>About</h4>
                       </a>
@@ -27,24 +27,24 @@
                     </figure>
                   </div>
                   <div class="col-md-3">
-                    <figure class="featured bg-yellow-konapun">
-                      <span class="icon fa fa-star-o"></span>
+                    <figure class="featured bg-pattern">
+                      <span class="icon darkgrey fa fa-star-o"></span>
                       <a class="figcaption" href="#" {{action "showHighlight" "interests"}}>
                         <h4>Interests</h4>
                       </a>
                     </figure>
                   </div>
                   <div class="col-md-3">
-                    <figure class="featured bg-yellow-konapun">
-                      <span class="icon fa fa-list-alt"></span>
+                    <figure class="featured bg-pattern">
+                      <span class="icon darkgrey fa fa-list-alt"></span>
                       <a class="figcaption" href="#" {{action "showHighlight" "phyloanalytics"}}>
                         <h4>Resume</h4>
                       </a>
                     </figure>
                   </div>
                   <div class="col-md-3">
-                    <figure class="featured bg-yellow-konapun">
-                      <span class="icon fa fa-trash-o"></span>
+                    <figure class="featured bg-pattern">
+                      <span class="icon darkgrey fa fa-trash-o"></span>
                       <a class="figcaption" href="#" {{action "showHighlight" "misc"}}>
                         <h4>Misc</h4>
                       </a>
@@ -57,38 +57,8 @@
             
             <!-- Featured Elements -->
             <div class="row">
-              <div class="col-md-4">
-                <figure class="featured bg-yellow-konapun">
-                  <span class="icon glyphicon glyphicon-list-alt"></span>
-                  <a class="figcaption" href="#">
-                    <h3>Blog</h3>
-                    <span>
-                      Rantings, development notes, etc.
-                    </span>
-                  </a>
-                </figure>
-              </div>
-              <div class="col-md-4">
-                <figure class="featured bg-yellow-konapun">
-                  <span class="icon glyphicon fa fa-flask"></span>
-                  <a class="figcaption" href="#">
-                    <h3>Projects</h3>
-                    <span>
-                      How I keep myself occupied in my spare time
-                    </span>
-                  </a>
-                </figure>
-              </div>
-              <div class="col-md-4">
-                <figure class="featured bg-yellow-konapun">
-                  <span class="icon glyphicon fa fa-beer"></span>
-                  <a class="figcaption" href="#">
-                    <h3>Placeholder</h3>
-                    <span>
-                      Meh
-                    </span>
-                  </a>
-                </figure>
+              <div class="well highlight-content">
+                {{outlet content}}
               </div>
             </div>
             

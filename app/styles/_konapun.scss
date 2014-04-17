@@ -1,52 +1,137 @@
 $content-bg: 'backgrounds/cream_dust_@2X.png';
-$ambient-bg: 'backgrounds/nami.png';
+//$content-bg: 'backgrounds/wild_oliva.png';
+//$ambient-bg: 'backgrounds/nami.png';
 
 @import url(http://fonts.googleapis.com/css?family=Tienne);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
 
 html {
   overflow-x: hidden;
+  height: 100%;
 }
 
 body {
-  background-image: url($ambient-bg);
   z-index: 0;
+  height: 100%;
+  font-family: 'Raleway', serif;
 }
 
-div.logo {
-  background-color: $green-konapun;
-  margin-left: auto;
-  height: 400px;
-  padding-top: 129px;
+img.logo {
+  margin-left: 20px;
+  margin-bottom: 0px;
+  margin-top: -8px;
+}
+
+.fixed-top {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  min-height: 100%;
+  margin-bottom: 600px;
+}
+
+.fixed-bottom {
+  position: fixed;
+  clear: both;
+  bottom: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+.mount {
+  background-image: url('backgrounds/red-felt.png');
+  min-height: 82px;
+}
+
+.mount-top {
+  padding-top: 4px;
+  margin-top: 0px;
+}
+
+.mount-bottom {
+  padding-top: 12px;
+  padding-bottom: 0px;
+}
+ 
+.wide-bar {
+  position: relative;
+  background-image: url('backgrounds/paper.png');
+  width: 100%;
+  padding: 0;
+}
+
+.header {
+  height: 82px;
+}
+
+.wide-bar-header {
+  margin-top: -30px;
+  @include box-shadow(0 5px 10px rgba(0, 0, 0, 0.6));
+}
+
+.wide-bar-footer {
+  min-height: 80px;
+  @include box-shadow(0 -5px 10px rgba(0, 0, 0, 0.4));
 }
 
 .content {
-  padding-top: 20px;
+  width: 100%;
+  min-height: 800px;
+  height: 100%;
+  padding: 20px 0;
   background-image: url($content-bg);
-  min-height: 1000px;
+  margin-bottom: -200px;
 }
 
 .footer {
-  margin-top: 12px;
-  padding: 2px;
+  margin-top: 200px;
+  margin-bottom: 0;
+}
+
+.footer-content {
+  padding-top: 32px;
 }
 
 .brand {
+  float: left;
   font-size: 40px;
-  padding: 0;
-  color: #474747;
+  padding: 0 4px;
+  color: $darkgrey;
   font-family: 'Tienne', serif;
+  
+  div.heading {
+    font-size: 43px;
+    margin-top: -6px;
+    padding: 0;
+  }
+  
+  div.subtitle {
+    padding: 0;
+    margin-top: -32px;
+    
+    span {
+      font-size: 13px;
+    }
+  }
 }
 
-/*
- * Allow child elements to expand to full browser width
- */
-.wide-stripe {
-  position: relative;
-  background-image: url($content-bg);
-  width: 100%;
-  padding: 6px 0;
-  margin-top: -20px;
-  @include box-shadow(0 5px 10px rgba(0, 0, 0, 0.6));
+.bg-pattern {
+  background-image: url('elements/truchet.png');
+}
+
+.jumbotron-small {
+  text-align: center;
+  padding: 9px 2px;
+  margin-bottom: 30px;
+  
+  @include border-radius(6px);
+  
+  h1 {
+    font-size: 43px;
+  }
+  h1, h2, h3, h4 {
+    font-weight: bold;
+  }
 }
 
 .jumbotron-graphic {
@@ -69,7 +154,7 @@ div.logo {
   z-index: 1;
   width: 100%;
   
-  .icon {
+  .icon, .label {
     width: 100%;
     text-align: center;
     font-size: 160px;
@@ -120,10 +205,6 @@ div.logo {
   }
 }
 
-.highlight {
-  min-height: 200px;
-}
-
 .col-md-6 .featured {
   height: 300px;
 }
@@ -136,27 +217,32 @@ div.logo {
   }
 }
 
-.col-md-3 .featured {
-  height: 130px;
-  
-  .icon {
-    font-size: 90px;
-    margin-top: 22px;
+.col-md-3, .col-md-2 {
+  .featured {
+    height: 80px;
+    
+    .icon {
+      font-size: 60px;
+      margin-top: 10px;
+    }
+    .label {
+      font-size: 40px;
+    }
   }
-}
-
-.col-md-2 .featured {
-  height: 168px;
 }
 
 .nav-links {
   position: relative;
-  top: 10px;
+  top: 20px;
 }
 
 .tile {
   padding: 20px 8px;
   margin: 8px;
+}
+
+.bg-felt {
+  background-image: url('backgrounds/red-felt.png');
 }
 
 .full-width {
@@ -167,25 +253,13 @@ div.logo {
   opacity: 0;
 }
 
-.circles {
-  .circle {
-    height: 140px;
-    width: 140px;
-    opacity: 0.7;
-    @include border-radius(70px);
-    
-    &:hover {
-      opacity: 1;
-    }
-  }
-  
-  div.row {
-    margin-bottom: -40px;
-  }
+.highlight-description {
+  min-height: 200px;
 }
 
-.circle {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #c81f1f;
+.highlight-content {
+  width: 100%;
+  min-height: 400px;
+  margin: 6px 0;
 }
+
