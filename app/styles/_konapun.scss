@@ -6,7 +6,7 @@ $content-bg: 'backgrounds/cream_dust_@2X.png';
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 
 html {
-  overflow-x: hidden;
+  overflow-x: auto;
   height: 100%;
 }
 
@@ -39,7 +39,7 @@ img.logo {
 }
 
 .mount {
-  background-image: url('backgrounds/red-felt.png');
+  background-image: url('backgrounds/nami-blue.png');
   min-height: 82px;
 }
 
@@ -55,7 +55,7 @@ img.logo {
  
 .wide-bar {
   position: relative;
-  background-image: url('backgrounds/paper.png');
+  background-image: url('backgrounds/arches.png');
   width: 100%;
   padding: 0;
 }
@@ -99,7 +99,7 @@ img.logo {
   color: $darkgrey;
   font-family: 'Tienne', serif;
   
-  div.heading {
+  .heading {
     font-size: 43px;
     margin-top: -6px;
     padding: 0;
@@ -113,6 +113,12 @@ img.logo {
       font-size: 13px;
     }
   }
+}
+
+.wave {
+  margin-top: -40px;
+  font-size: 8px;
+  height: 80px;
 }
 
 .bg-pattern {
@@ -234,11 +240,6 @@ img.logo {
 .nav-links {
   position: relative;
   top: 20px;
-}
-
-.tile {
-  padding: 20px 8px;
-  margin: 8px;
 }
 
 .bg-felt {

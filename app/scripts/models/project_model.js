@@ -1,9 +1,10 @@
 KonapunGithubIo.Project = DS.Model.extend({
-  // TODO: keywords
   name: DS.attr('string'),
   language: DS.attr('string'),
   description: DS.attr('string'),
   isCompleted: DS.attr('boolean'),
+  technologies: DS.attr('string', { defaultValue: [] }),
+  tags: DS.attr('string', { defaultValue: [] }),
   link: DS.attr('string')
 });
 

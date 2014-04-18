@@ -5,7 +5,8 @@ KonapunGithubIo.Post = DS.Model.extend({
     }
   }),
   headline: DS.attr('string'),
-  article: DS.attr('string')
+  article: DS.attr('string'),
+  tags: DS.attr('string', { defaultValue: [] })
 });
 
 // temporarily keep data as fixture until heroku REST API server is set up
