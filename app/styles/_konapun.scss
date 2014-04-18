@@ -52,7 +52,11 @@ img.logo {
   padding-top: 12px;
   padding-bottom: 0px;
 }
- 
+
+.shade {
+  background-image: url('backgrounds/nami.png') !important;
+}
+
 .wide-bar {
   position: relative;
   background-image: url('backgrounds/arches.png');
@@ -76,10 +80,11 @@ img.logo {
 
 .content {
   width: 100%;
-  min-height: 800px;
+  min-height: 600px;
   height: 100%;
   padding: 20px 0;
   background-image: url($content-bg);
+  margin-top: -30px;
   margin-bottom: -200px;
 }
 
