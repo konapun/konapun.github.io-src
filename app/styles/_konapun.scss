@@ -103,17 +103,25 @@ img.logo {
   padding: 0 4px;
   color: $darkgrey;
   font-family: 'Tienne', serif;
+  margin-top: 17px;
   
   .heading {
     font-size: 43px;
-    margin-top: -6px;
+    margin-top: 10px;
     padding: 0;
+    z-index: 2;
+  }
+  .focus {
+    z-index: 2;
+    position: relative;
+    font-weight: bold;
+    color: $black;
   }
   
   div.subtitle {
     padding: 0;
     margin-top: -32px;
-    
+    z-index: 1;
     span {
       font-size: 13px;
     }
@@ -121,9 +129,13 @@ img.logo {
 }
 
 .wave {
-  margin-top: -40px;
+  position: absolute;
+  background-image: url('elements/wave-small.png');
+  background-repeat: no-repeat;
   font-size: 8px;
   height: 80px;
+  width: 541px;
+  z-index: 1;
 }
 
 .bg-pattern {

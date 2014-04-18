@@ -20,3 +20,8 @@ a.nostyle {
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
   background-color: $blue-wave;
 }
+
+.container {
+  min-width: 1170px !important;
+  width: 1170px !important;
+}
