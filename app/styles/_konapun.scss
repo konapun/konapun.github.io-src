@@ -55,6 +55,9 @@ img.logo {
 
 .shade {
   background-image: url('backgrounds/nami.png') !important;
+  min-height: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 20px;
 }
 
 .wide-bar {
@@ -138,8 +141,17 @@ img.logo {
   z-index: 1;
 }
 
+.bg-arches {
+  background-image: url('backgrounds/arches.png');
+  border: 6px solid $black;
+}
+
 .bg-pattern {
   background-image: url('elements/truchet.png');
+}
+
+.bg-paper {
+  background-image: url('backgrounds/ricepaper2_@2X.png');
 }
 
 .jumbotron-small {
