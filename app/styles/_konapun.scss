@@ -16,7 +16,8 @@ body {
   font-family: 'Raleway', serif;
 }
 
-img.logo {
+.logo {
+  border: 6px solid $black;
   margin-left: 20px;
   margin-bottom: 0px;
   margin-top: -8px;
@@ -44,13 +45,16 @@ img.logo {
 }
 
 .mount-top {
-  padding-top: 4px;
-  margin-top: 0px;
+  padding-top: 16px;
 }
 
 .mount-bottom {
-  padding-top: 12px;
-  padding-bottom: 0px;
+//  padding-top: 12px;
+  padding-bottom: 16px;
+}
+
+.mount-bottom-thin {
+  padding-bottom: 8px;
 }
 
 .shade {
@@ -72,7 +76,7 @@ img.logo {
 }
 
 .wide-bar-header {
-  margin-top: -30px;
+//  margin-top: -30px;
   @include box-shadow(0 5px 10px rgba(0, 0, 0, 0.6));
 }
 
@@ -87,7 +91,7 @@ img.logo {
   height: 100%;
   padding: 20px 0;
   background-image: url($content-bg);
-  margin-top: -30px;
+//  margin-top: -30px;
   margin-bottom: -200px;
 }
 
