@@ -1,16 +1,11 @@
 <h1>Project</h1>
 
-<table>
-  {{#each model.attributes}}
-  <tr>
-    <td>
-      <strong>{{this.key}}:</strong>
-    </td>
-    <td>
-      {{this.value}}
-    </td>
-  </tr>
+<ul>
+  {{#each models}}
+  <li>
+    <h2>{{this.name}}</h2>
+  </li>
   {{/each}}
-</table>
+</ul>
 
 {{outlet}}

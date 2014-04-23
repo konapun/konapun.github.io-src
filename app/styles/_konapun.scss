@@ -1,6 +1,4 @@
 $content-bg: 'backgrounds/cream_dust_@2X.png';
-//$content-bg: 'backgrounds/wild_oliva.png';
-//$ambient-bg: 'backgrounds/nami.png';
 
 @import url(http://fonts.googleapis.com/css?family=Tienne);
 @import url(http://fonts.googleapis.com/css?family=Raleway);
@@ -21,6 +19,7 @@ body {
   margin-left: 20px;
   margin-bottom: 0px;
   margin-top: -8px;
+  @include border-radius(6px);
 }
 
 .fixed-top {
@@ -285,6 +284,11 @@ body {
 
 .transparent {
   opacity: 0;
+}
+
+.em {
+  font-weight: bold;
+  color: $blue-wave;
 }
 
 .highlight-description {
