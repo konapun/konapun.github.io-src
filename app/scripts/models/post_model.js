@@ -14,16 +14,9 @@ KonapunGithubIo.Post.FIXTURES = [
   
   {
     id: 0,
-    date: new Date(2014, 3, 3),
-    headline: "First Article",
-    article: "This is my first article"
-  },
-  
-  {
-    id: 1,
-    date: new Date(2014, 3, 6),
-    headline: "Second Article",
-    article: "This is my second article"
+    date: new Date(2014, 3, 22),
+    headline: "Welcome!",
+    article: "I finally got the Grunt build system working and everything seems to be fine now!"
   }
   
 ];
