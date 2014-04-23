@@ -164,7 +164,8 @@ module.exports = function (grunt) {
                     src: [
                         '<%= yeoman.dist %>/scripts/{,*/}*.js',
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
+                        '<%= yeoman.dist %>/styles/backgrounds/*',
+                        '<%= yeoman.dist %>/styles/elements/*',
                         '<%= yeoman.dist %>/styles/fonts/*'
                     ]
                 }
@@ -185,11 +186,24 @@ module.exports = function (grunt) {
         },
         imagemin: {
             dist: {
-                files: [{
+                files: [
+                {
                     expand: true,
                     cwd: '<%= yeoman.app %>/images',
                     src: '{,*/}*.{png,jpg,jpeg}',
                     dest: '<%= yeoman.dist %>/images'
+                },
+                {
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/styles/backgrounds',
+                    src: '{,*/}*.{png,jpg,jpeg}',
+                    dest: '<%= yeoman.dist %>/styles/backgrounds'
+                },
+                {
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/styles/elements',
+                    src: '{,*/}*.{png,jpg,jpeg}',
+                    dest: '<%= yeoman.dist %>/styles/elements'
                 }]
             }
         },
@@ -200,6 +214,18 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>/images',
                     src: '{,*/}*.svg',
                     dest: '<%= yeoman.dist %>/images'
+                },
+                {
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/styles/backgrounds',
+                    src: '{,*/}*.svg',
+                    dest: '<%= yeoman.dist %>/styles/backgrounds'
+                },
+                {
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/styles/elements',
+                    src: '{,*/}*.svg',
+                    dest: '<%= yeoman.dist %>/styles/elements'
                 }]
             }
         },
