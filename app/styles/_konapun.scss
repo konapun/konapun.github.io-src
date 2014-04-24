@@ -41,6 +41,7 @@ body {
 .mount {
   background-image: url('backgrounds/nami-blue.png');
   min-height: 82px;
+  min-width: $width;
 }
 
 .mount-top {
@@ -75,7 +76,6 @@ body {
 }
 
 .wide-bar-header {
-//  margin-top: -30px;
   @include box-shadow(0 5px 10px rgba(0, 0, 0, 0.6));
 }
 
@@ -92,6 +92,12 @@ body {
   background-image: url($content-bg);
 //  margin-top: -30px;
   margin-bottom: -200px;
+}
+
+.dl-spaced {
+  dd, dt {
+    padding: 4px 0;
+  }
 }
 
 .footer {
