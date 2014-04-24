@@ -1,24 +1,27 @@
 <div class="content">
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-xs-4">
-        <ul class="well">
+      <div class="col-md-3 col-xs-3">
+        <ul class="nav nav-pills nav-stacked">
           {{#each controller}}
-          <li>
-            {{#link-to 'post' this}}
-              {{this.headline}}
-            {{/link-to}}
+          {{#link-to 'post' this tagName="li"}}
+            <a href="#">{{this.headline}}</a>
+          {{/link-to}}
           {{/each}}
         </ul>
       </div>
-      <div class="col-md-8 col-xs-4">
+      <div class="col-md-9 col-xs-9">
         <div class="jumbotron bg-arches">
           <h1>Blog</h1>
           <p class="lead">
             Some kind of tag line...
           </p>
         </div>
-        {{outlet}}
+        <div class="panel panel-default">
+          <div class="panel-body">
+            {{outlet}}
+          </div>
+        </div>
       </div>
     </div>
   </div>
